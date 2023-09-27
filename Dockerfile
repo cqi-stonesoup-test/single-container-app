@@ -1,6 +1,11 @@
+FROM registry.access.redhat.com/ubi9/ubi:9.2-696
+RUN echo "hello first build stage from ubi9" >/hello.txt
+
 # Use the official Node 8 image.
 # https://hub.docker.com/_/node 
 FROM node 
+
+COPY --from=0 /hello.txt /hello-world.txt
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
