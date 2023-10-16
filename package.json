@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/jduimovich/single-container-app",
   "dependencies": {
-    "express": "^4.17.1"
+    "dayjs": "^1.11.10",
+    "express": "^4.17.1",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0",
+    "undercore": "^1.0.0"
   }
 }
