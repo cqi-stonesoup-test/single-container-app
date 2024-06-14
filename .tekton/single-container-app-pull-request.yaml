@@ -422,6 +422,24 @@ spec:
         - name: kind
           value: task
         resolver: bundles
+
+    - name: use-myinfo
+      runAfter:
+      - clone-repository
+      taskSpec:
+        steps:
+        - name: consume-myinfo
+          image: registry.fedoraproject.org/fedora:40
+          script: |
+            ls -l /etc/my-info
+          volumeMounts:
+          - name: my-info
+            mountPath: /etc/my-info
+        volumes:
+        - name: my-info
+          secret:
+            secretName: my-info
+
     workspaces:
     - name: workspace
     - name: git-auth
