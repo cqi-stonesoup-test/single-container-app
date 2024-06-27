@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/ubi:9.2-696
+FROM registry.access.redhat.com/ubi9/ubi:9.4-1123
 RUN echo "hello first build stage from ubi9" >/hello.txt
 
 # Use the official Node 8 image.
