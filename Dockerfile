@@ -1,9 +1,7 @@
 FROM registry.access.redhat.com/ubi9/ubi:9.4-1123.1719560047
 RUN echo "hello first build stage from ubi9" >/hello.txt
 
-# Use the official Node 8 image.
-# https://hub.docker.com/_/node 
-FROM node 
+FROM registry.access.redhat.com/ubi8/nodejs-20@sha256:357b35e91e14580b9583498ffdd3b08eb1ede1b9676f7bf566f66fb14d7e3a92 
 
 COPY --from=0 /hello.txt /hello-world.txt
 
