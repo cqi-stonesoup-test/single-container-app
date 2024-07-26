@@ -26,3 +26,7 @@ EXPOSE $PORT
 # Run the web service on container startup.
 CMD [ "node", "app.js" ]
 
+FROM scratch
+COPY --from=1 /hello-world.txt /usr/src/hello-woooooorrrld.txt
+
+
