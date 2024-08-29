@@ -42,6 +42,9 @@ spec:
     containerImage: quay.io/jduimovich0/single-container-app
 ```
 
+
+hello world
+
 Stone soup will build and deploy your application. In the manage stone soup environment use the UI to browse to your running application.  
 
 If are using CLI only to access, use `oc get routes` to find the URL to your application.
