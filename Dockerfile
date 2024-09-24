@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi9/ubi:9.4-1181
 RUN echo "hello first build stage from ubi9" >/hello.txt
 
-FROM registry.access.redhat.com/ubi8/nodejs-20@sha256:357b35e91e14580b9583498ffdd3b08eb1ede1b9676f7bf566f66fb14d7e3a92 
+FROM registry.access.redhat.com/ubi8/nodejs-20@sha256:d304b7fdfba0c4d3bf4f20d9a918737ef717fff615f9b9e2ce0bf0fb3d1f6abf 
 
 COPY --from=0 /hello.txt /hello-world.txt
 
