@@ -20,7 +20,7 @@ RUN npm install --only=production
 COPY . . 
 
 # Configure and document the service HTTP port.
-ENV PORT 8080
+ENV PORT 8081
 EXPOSE $PORT
 
 # Run the web service on container startup.
